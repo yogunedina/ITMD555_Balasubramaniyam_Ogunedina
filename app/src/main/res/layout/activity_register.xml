@@ -70,7 +70,7 @@
         android:layout_marginStart="161dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="162dp"
-        android:background="#2c5cdf"
+        android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:text="Register"
         android:textColor="#fff"

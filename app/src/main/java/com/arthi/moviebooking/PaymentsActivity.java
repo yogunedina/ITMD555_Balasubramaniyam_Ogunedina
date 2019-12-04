@@ -68,7 +68,7 @@ public class PaymentsActivity extends AppCompatActivity {
                         builder.create().dismiss();
                         AlertDialog.Builder alert = new AlertDialog.Builder(PaymentsActivity.this);
                         alert.setCancelable(true);
-                        alert.setTitle("Payments Update").setMessage("Payment Successful").setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                        alert.setTitle("Payments Update").setMessage("Payment Successful! Enjoy Your Movie!").setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 startActivity(new Intent(PaymentsActivity.this,HomePage.class));
