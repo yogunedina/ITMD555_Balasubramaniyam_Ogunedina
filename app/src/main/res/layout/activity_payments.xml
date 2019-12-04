@@ -1,97 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="20dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Add a credit/debit card" />
-
-    <EditText
-        android:id="@+id/Cardname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView3"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Name on Card"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/creditcard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Cardname"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="Card Number"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/SecurityCode"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/creditcard"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="CVV"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/month"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/creditcard"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/SecurityCode"
-        android:ems="10"
-        android:hint="MM"
-        android:inputType="number"
-        android:maxLength="2" />
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/month"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@id/month"
-        android:layout_toRightOf="@id/month"
-        android:text="/"
-        android:textSize="30sp" />
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:text="Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/year"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/creditcard"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/textView4"
-        android:ems="10"
-        android:hint="YY"
-        android:inputType="number"
-        android:maxLength="2" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:text="Ticket Price (each):         20$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="16dp"
+        android:text="Seat(s): "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textViewSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="18dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="26dp"
+        android:text="Total"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSeats" />
 
     <Button
-        android:id="@+id/Submitorder"
-        android:layout_width="250dp"
+        android:id="@+id/buttonPay"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/SecurityCode"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#50B9AF"
-        android:onClick="onClick"
-        android:text="Submit Order"
-        android:textSize="18sp" />
-</RelativeLayout>
+        android:layout_marginTop="39dp"
+        android:text="Pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+</androidx.constraintlayout.widget.ConstraintLayout>

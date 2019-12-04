@@ -11,6 +11,7 @@ import android.view.textclassifier.TextLinks;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -105,9 +106,14 @@ public class BookingPage extends AppCompatActivity {
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BookingPage.this, PaymentsActivity.class)
-                        .putExtra("data", moviesContent)
-                        .putExtra("seats", no_seats.getText().toString().trim()));
+                if(seats>0){
+                    startActivity(new Intent(BookingPage.this, PaymentsActivity.class)
+                            .putExtra("data", moviesContent)
+                            .putExtra("seats", no_seats.getText().toString().trim()));
+                }else{
+                    Toast.makeText(BookingPage.this, "Seats should be greater than 0", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
